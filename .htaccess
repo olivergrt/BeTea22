@@ -1,0 +1,42 @@
+RewriteEngine On
+
+RewriteRule ^accueil$ index.php
+RewriteRule ^mentions-legales$ mentions_legales.php
+
+RewriteRule ^inscription$ inscription.php
+RewriteRule ^connexion$ connexion.php
+RewriteRule ^commander$ commander.php
+RewriteRule ^historique-([A-a-Z-z-]+)$ historique_client.php
+RewriteRule ^mon-panier$ panier_client.php
+RewriteRule ^deconnexion$ deconnexion.php
+RewriteRule ^aide$ aide.php
+RewriteRule ^commander-categorie-([0-9]+)$ commander.php?categorie=$1
+RewriteRule ^commander-categorie-([0-9]+)-produit-([0-9]+)$ commander.php?categorie=$1&produit=$2
+RewriteRule ^parametre-nom$ parametres_client.php?nom=client
+RewriteRule ^parametre-prenom$ parametres_client.php?prenom=client
+RewriteRule parametre-mail$ parametres_client.php?mail=client
+RewriteRule parametre-mot-de-passe$ parametres_client.php?password=client
+
+RewriteRule ^00f2b1ead3a0990b818517356cb40280$ ressource/00f2b1ead3a0990b818517356cb40280.php
+RewriteRule ^administrateur$ admin/connexionAdmin.php
+RewriteRule ^historiqueAdmin$ admin/historique.php
+RewriteRule ^gestion$ admin/gestion.php
+RewriteRule ^aide-client$ admin/aide.php
+RewriteRule ^gestion-commandes$ admin/gestion.php?gestion=commandes
+RewriteRule ^gestion-categories$ admin/gestion.php?gestion=categorie
+RewriteRule ^gestion-produits$ admin/gestion.php?gestion=produit
+RewriteRule ^gestion-codespromo$ admin/gestion.php?gestion=codepromo
+RewriteRule ^gestion-clients$ admin/gestion.php?gestion=client
+RewriteRule ^gestion-rangs$ admin/gestion.php?gestion=rang
+RewriteRule ^parametres-nom$ admin/parametres.php?nom=admin
+RewriteRule ^parametres-prenom$ admin/parametres.php?prenom=admin
+RewriteRule ^parametres-mail$ admin/parametres.php?mail=admin
+RewriteRule ^parametres-password$ admin/parametres.php?password=admin
+RewriteRule ^gestion-modifier-commandes-([0-9]+)$ admin/gestion.php?gestion=commandes&modifier=$1
+RewriteRule ^gestion-supprimer-commandes-([0-9]+)$ admin/gestion.php?gestion=commandes&supprimer=$1
+RewriteRule ^gestion-modifier-categorie-([0-9]+)$ admin/gestion.php?gestion=categorie&modifier=$1
+RewriteRule ^gestion-modifier-produit-([0-9]+)$ admin/gestion.php?gestion=produit&modifier=$1
+RewriteRule ^gestion-supprimer-produit-([0-9]+)$ admin/gestion.php?gestion=produit&supprimer=$1
+RewriteRule ^gestion-modifier-codepromo-([0-9]+)$ admin/gestion.php?gestion=codepromo&modifier=$1
+RewriteRule ^gestion-supprimer-codepromo-([0-9]+)$ admin/gestion.php?gestion=codepromo&supprimer=$1
+
